@@ -1,6 +1,6 @@
 
 import {getProducts} from './api.js';
-import { renderCart } from './card.js';
+import { renderCart, setupCartEvents } from './card.js';
 import { setupDragDrop } from './dragDrop.js';
 import { setupProducts } from './products.js';
 
@@ -9,11 +9,11 @@ const cartItems = document.querySelector("#cart-items")
 const productList = document.querySelector("#product-list")
 const basket = document.querySelector("#basket")
 
-// initialize cart
+// initalize cart
  renderCart(cartItems)
-
+setupCartEvents(cartItems)
  
- //load products
+ //load products 
  setTimeout(() =>{
      
     getProducts()
